@@ -1,0 +1,239 @@
+*{
+
+    padding: 0%;
+    margin: 0%;
+}
+.sec1{
+ 
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    
+}
+.header_container{
+
+    position: fixed;
+    top:10px;
+    left:18%;
+    width: 70%;
+    text-align: center;
+    height: 60px;
+    border-radius:50px;
+    border:2px solid white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    overflow:hidden;
+    backdrop-filter: blur(10px);
+}
+
+.header_container2{
+
+    background-color: rgb(16, 4, 20);
+    
+}
+.content{
+    
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.content a{
+    text-decoration: none;
+    color: rgb(242, 240, 243);
+    font-weight: 500;
+}
+
+.videoBox{
+
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+}
+.videoBox video{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+.contentBox{
+
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items:center; 
+    flex-direction: column;
+    height: 100%;
+    width:80%;
+    left: 15%;
+    
+}
+.contentBox h1{
+    font-size: 60px;
+    -webkit-text-stroke: 1px  rgb(244, 243, 243);
+    color:transparent;
+    
+}
+.btn_box{
+    
+    margin-top: 20px;
+}
+.btn_box .btn{
+
+    height: 40px;
+    width: 200px;
+    color:white;
+    background:transparent;
+    border:2px solid white;
+    font-weight: bold;
+    transition: .5s;
+}
+.btn:hover{
+    
+    color:rgb(18, 17, 17);
+    background-color:rgb(241, 239, 239);
+}
+
+.sec2{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width:100%;
+    flex-wrap: wrap;
+}
+.car_infoL,.car_infoR{
+
+    position: relative;
+    height: 15rem;
+    width: 40%;
+}
+.car_img{
+    height: 100%;
+    width: 100%;
+}
+.car_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.car_content{
+     color:white;
+     position: absolute;
+     bottom: 10px;
+     padding: 5px;
+}
+.logo_img{
+    
+    bottom: 20px;
+    right: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+}
+.logo_img img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+
+.logo_animation {
+  animation: logoanimation 1s ease infinite;
+}
+
+@keyframes logoanimation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50%{
+    transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.sec3{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.content_half{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    right:50px;
+    color:white
+}
+.content_half h1{
+    font-size: 50px;
+}
+.half_video{
+    width: 100%;
+    height: 100%;
+}
+
+.half_video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec4{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(2, 2, 53);
+    
+}
+.text_page{
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-top: 15%;
+    padding-left:6%;
+    letter-spacing: 20px;
+}
+.sec5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* spacing between models */
+  padding: 100px 20px;
+  background: #000; /* optional dark background for contrast */
+  min-height: 100vh;
+}
+
+.model_cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+model-viewer {
+  width: 80vw;        /* 80% of viewport width */
+  height: 70vh;       /* 70% of viewport height */
+  max-width: 1000px;  /* prevents overly large on big screens */
+  border-radius: 20px;
+  background: #111;   /* gives a subtle dark frame */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.5s ease;
+}
+
+model-viewer:hover {
+  transform: scale(1.05);
+}
